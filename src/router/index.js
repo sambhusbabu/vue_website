@@ -23,6 +23,30 @@ const routes = [
     meta: {
       title: 'About'
     }
+  },
+  {
+    path: '/me',
+    name: 'Profile',
+    component: () => import(/* webpackChunkName: "profile" */ '../views/Profile.vue'),
+    meta: {
+      title: 'Profile'
+    }
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: () => import(/* webpackChunkName: "test" */ '../views/TestContent.vue'),
+    meta: {
+      title: 'Test'
+    }
+  },
+  {
+    path: '*',
+    name: '404',
+    component: () => import(/* webpackChunkName: "404" */ '../views/Page404.vue'),
+    meta: {
+      title: '404'
+    }
   }
 ]
 
